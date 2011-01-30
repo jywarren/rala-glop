@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>RALA/GLOP</title>
+	<script src="lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script type="text/javascript" charset="utf-8">
+	function load_script(script) {
+		$$('head')[0].insert(new Element('script', { 'src': script, 'type': 'text/javascript', 'charset': 'utf-8', evalJSON: 'force' }));
+	}
+	function load_next_script() {
+		if (scripts.length > 0) {
+			load_script(scripts.splice(0,1)[0])
+		}
+	}
+	scripts = [
+	'canvas.js',
+	'config.js',
+	'events.js',
+	'layers.js',
+	'box.js',
+	'glop.js',
+	'rala.js',
+	'glyphs.js'
+	]
+</script>
+<body oncontextmenu="return false;" onLoad="load_next_script()">
+
+<div id="pointerLabel">
+	
+</div>
+
+<canvas id="canvas"></canvas>
+
+<div id="palette">
+	<a class="button green" id="run_button" href="javascript:void(0)" onClick="toggle_mode();">Run</a> 
+</div>
+
+</body>
+</html>

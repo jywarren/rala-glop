@@ -1,0 +1,11 @@
+#### To Do ####
+
+not copy tokens on edges of the group - that reference uncopied objects
+
+
+
+#### Completed ####
+
+3-7-09: clone parent storage in cloned objects
+
+3-7-09: finish cloning whole group before followup_reassign_tokens() function

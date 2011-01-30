@@ -1,0 +1,7 @@
+Dragging groups of selected objects:
+	Assumptions:
+		- selectedObjects == object.is_selected
+		- pointerX,Y is read the same for a given frame (tested)
+		- we're telling each object to moveTo only once
+	Try:
+		- calculate offsets, pointer loc, etc. globally as much as possible
